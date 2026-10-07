@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="부산 시민 AI 체험의 날. 2026년 11월 30일 10:00~18:00, 영화의 전당 1층. 생활 속 AI 활용법을 쉽고 안전하게 소개합니다. 무료, 현장 신청 정원 100명.">
+  <meta name="theme-color" content="#086bcb">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23086bcb'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='34' fill='white'%3EAI%3C/text%3E%3C/svg%3E">
+  <title>부산 시민 AI 체험의 날 | 행사 안내</title>
+  <style>
+    /* 부산 CI의 색상 계열을 참고한 웹용 팔레트. 공식 색상 코드의 표기가 아닙니다. */
+    :root { --blue:#086bcb; --violet:#5e2ea6; --magenta:#d6007e; --ink:#132b43; --muted:#526477; --wash:#e9f6ff; --line:#d8e4ec; --white:#fff; --display:'Malgun Gothic','Apple SD Gothic Neo',sans-serif; --body:'Segoe UI','Malgun Gothic','Apple SD Gothic Neo',sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:auto; scroll-padding-top:108px; }
+    body { margin:0; color:var(--ink); background:var(--white); font:16px/1.7 var(--body); word-break:keep-all; overflow-wrap:break-word; }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--magenta); outline-offset:5px; }
+    .wrap { width:min(1180px, calc(100% - 64px)); margin-inline:auto; }
+    .skip { position:fixed; top:10px; left:10px; z-index:20; padding:12px 20px; background:var(--white); border:2px solid var(--blue); transform:translateY(-160%); }
+    .skip:focus { transform:translateY(0); }
+    .site-header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.97); border-bottom:1px solid var(--line); }
+    .header-inner { min-height:84px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+    .brand { display:flex; align-items:center; gap:22px; flex-shrink:0; }
+    .brand img { display:block; width:142px; height:auto; }
+    .brand-label { border-left:1px solid var(--line); padding-left:22px; font-size:13px; color:var(--muted); }
+    .nav { display:flex; align-items:center; gap:28px; font-size:14px; font-weight:700; }
+    .nav a { padding:8px 0; }
+    .nav a:hover { color:var(--blue); }
+    .nav .nav-apply { padding:10px 18px; border-radius:8px; background:var(--blue); color:var(--white); }
+    .hero { position:relative; overflow:hidden; background:var(--wash); padding:48px 0 0; }
+    .hero-main { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:25px; padding-bottom:42px; }
+    .eyebrow { display:flex; align-items:center; gap:10px; margin:0 0 20px; color:var(--blue); font-size:14px; font-weight:800; }
+    .eyebrow::before { content:''; width:9px; height:9px; border-radius:50%; background:var(--magenta); }
+    h1 { font:900 clamp(40px, 4.5vw, 66px)/1.26 var(--display); letter-spacing:-.065em; margin:0; }
+    h1 .city { display:block; }
+    h1 .ai-word { color:var(--blue); }
+    .hero-copy { font-size:19px; line-height:1.85; margin:25px 0 28px; color:var(--muted); }
+    .hero-copy strong { color:var(--ink); font-weight:700; }
+    .hero-tags { display:flex; gap:9px; flex-wrap:wrap; margin-bottom:27px; }
+    .tag { padding:5px 13px; font-size:13px; border:1px solid #bdcedf; border-radius:30px; background:var(--white); font-weight:700; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .button { min-height:51px; display:inline-flex; align-items:center; justify-content:center; gap:23px; padding:12px 23px; border-radius:9px; font-size:15px; font-weight:800; transition:background .15s, transform .15s; }
+    .button:hover { transform:translateY(-2px); }
+    .button-primary { color:var(--white); background:var(--blue); }
+    .button-primary:hover { background:#0759aa; }
+    .button-secondary { border:1px solid #b3c9de; background:var(--white); }
+    .hero-art { position:relative; width:100%; aspect-ratio:1.15; max-width:440px; margin:auto; display:grid; place-items:center; isolation:isolate; }
+    .orbit { position:absolute; width:91%; height:91%; border:1px solid #b5d7ee; border-radius:50%; transform:rotate(-20deg); }
+    .orbit::before { content:''; position:absolute; top:8%; left:18%; width:19px; height:19px; border:5px solid var(--wash); border-radius:50%; background:var(--magenta); }
+    .orbit-two { width:112%; height:65%; transform:rotate(-25deg); }
+    .orbit-two::before { top:68%; left:2%; width:14px; height:14px; border:0; background:var(--blue); }
+    .chat-back { position:absolute; width:66%; height:65%; border-radius:48px 48px 48px 8px; background:linear-gradient(135deg,var(--violet),var(--magenta)); transform:rotate(12deg) translate(27px,17px); }
+    .chat-front { position:relative; width:66%; height:65%; border:2px solid var(--blue); border-radius:48px 48px 9px 48px; background:var(--white); transform:rotate(-8deg); display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 15px 32px #086bcb12; }
+    .chat-front .art-ai { font:900 clamp(90px, 10vw, 144px)/1 Arial,sans-serif; letter-spacing:-.07em; color:var(--blue); margin-left:-9px; }
+    .art-caption { margin-top:12px; color:var(--ink); font-size:16px; font-weight:800; letter-spacing:.1em; }
+    .spark { position:absolute; top:10%; right:10%; width:42px; height:42px; background:var(--magenta); clip-path:polygon(50% 0,62% 36%,100% 50%,62% 63%,50% 100%,37% 63%,0 50%,37% 36%); }
+    .art-dot { position:absolute; bottom:14%; left:11%; width:24px; height:24px; border:6px solid var(--violet); border-radius:50%; }
+    .event-strip { background:var(--blue); color:var(--white); }
+    .strip-grid { display:grid; grid-template-columns:1.2fr 1.25fr .6fr; gap:35px; padding:27px 0; }
+    .strip-item { padding-left:26px; border-left:1px solid #ffffff55; }
+    .strip-item:first-child { padding-left:0; border:0; }
+    .strip-label { display:block; font-size:12px; margin-bottom:3px; color:#dfedff; }
+    .strip-value { display:block; font-size:22px; font-weight:800; letter-spacing:-.035em; }
+    .strip-sub { font-size:14px; color:#e2efff; }
+    .section { padding:80px 0; }
+    .section-head { display:flex; align-items:flex-end; justify-content:space-between; gap:30px; margin-bottom:32px; }
+    .kicker { margin:0 0 9px; color:var(--blue); font-size:12px; font-weight:800; letter-spacing:.13em; }
+    h2 { margin:0; font:800 clamp(27px,3vw,36px)/1.4 var(--display); letter-spacing:-.05em; }
+    .section-description { margin:0; max-width:420px; color:var(--muted); font-size:15px; }
+    .intro { padding-bottom:0; }
+    .intro-box { border-bottom:1px solid var(--line); display:grid; grid-template-columns:1fr 1.25fr; gap:50px; padding-bottom:50px; }
+    .intro-text { margin:0; color:var(--muted); font-size:18px; }
+    .intro-text strong { color:var(--ink); }
+    .program-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .program-card { border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--white); }
+    .program-top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:28px 30px; background:#eaf5ff; }
+    .program-card.talk .program-top { background:#f3effb; }
+    .program-type { color:var(--blue); font-weight:800; font-size:13px; }
+    .talk .program-type { color:var(--violet); }
+    .program-time { margin:5px 0 0; font:800 26px/1.4 var(--body); letter-spacing:-.035em; }
+    .program-icon { width:46px; height:46px; flex-shrink:0; color:var(--blue); }
+    .talk .program-icon { color:var(--violet); }
+    .program-body { padding:28px 30px; }
+    h3 { font:800 23px/1.4 var(--display); letter-spacing:-.045em; margin:0 0 12px; }
+    .program-body p { margin:0 0 20px; color:var(--muted); }
+    .mini-data { margin:0; }
+    .mini-data div { display:flex; align-items:baseline; gap:15px; padding:9px 0; border-top:1px solid var(--line); font-size:14px; }
+    .mini-data dt { min-width:82px; color:var(--muted); }
+    .mini-data dd { margin:0; font-weight:700; }
+    .pending { color:var(--muted); font-weight:600; }
+    .schedule-section { background:#f6f9fc; }
+    .schedule-grid { display:grid; grid-template-columns:1.25fr 1fr; gap:35px; }
+    .schedule-list { border-top:2px solid var(--ink); }
+    .schedule-row { display:grid; grid-template-columns:150px 1fr; gap:22px; padding:25px 0; border-bottom:1px solid var(--line); }
+    .schedule-hour { font-size:19px; font-weight:800; color:var(--blue); }
+    .schedule-row h3 { font-size:19px; margin-bottom:6px; }
+    .schedule-row p { font-size:14px; color:var(--muted); margin:0; }
+    .venue { background:var(--white); border:1px solid var(--line); border-radius:14px; padding:28px; }
+    .venue-label { margin:0 0 9px; font-size:12px; color:var(--blue); font-weight:800; }
+    .venue-name { margin:0 0 10px; font-size:26px; font-weight:800; letter-spacing:-.04em; }
+    .venue-floor { display:inline-block; background:var(--wash); padding:4px 12px; border-radius:5px; font-size:14px; font-weight:700; }
+    .apply-panel { display:grid; grid-template-columns:1fr 1.1fr; border:1px solid #c4d6e6; border-radius:18px; overflow:hidden; }
+    .apply-lead { padding:39px; color:var(--white); background:var(--blue); }
+    .apply-lead .kicker { color:#d4e9ff; }
+    .apply-lead h3 { font-size:34px; margin:17px 0 9px; }
+    .apply-lead p { color:#e6f1ff; font-size:15px; margin:0; }
+    .apply-numbers { display:flex; gap:28px; margin-top:35px; }
+    .apply-number { font-size:26px; font-weight:800; }
+    .apply-number span { display:block; font-size:12px; font-weight:400; color:#deedff; }
+    .apply-detail { padding:35px 39px; display:flex; align-items:center; }
+    .apply-detail .mini-data { width:100%; }
+    .apply-detail .mini-data div { padding:13px 0; }
+    .apply-detail .mini-data div:first-child { border:0; }
+    .contact-section { padding:38px 0; background:var(--wash); }
+    .contact-inner { display:flex; justify-content:space-between; align-items:center; gap:28px; }
+    .contact-inner h2 { font-size:23px; }
+    .contact-inner p { margin:5px 0 0; color:var(--muted); font-size:14px; }
+    .phone { font:800 28px/1.5 Arial,sans-serif; color:var(--blue); }
+    .phone:hover { text-decoration:underline; }
+    .footer { padding:30px 0; border-top:1px solid var(--line); }
+    .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:25px; }
+    .footer img { width:152px; height:auto; display:block; }
+    .footer-info { display:flex; flex-wrap:wrap; gap:12px 26px; font-size:13px; color:var(--muted); }
+    .footer-info strong { color:var(--ink); }
+    .top-link { font-size:13px; font-weight:700; }
+    @media (max-width:1000px) {
+      .brand-label { display:none; }
+      .nav { gap:20px; }
+      .hero-main { grid-template-columns:1.2fr 1fr; }
+      h1 { font-size:48px; }
+      .hero-copy { font-size:17px; }
+      .strip-value { font-size:20px; }
+      .schedule-grid { gap:25px; }
+      .schedule-row { grid-template-columns:130px 1fr; gap:12px; }
+    }
+    @media (max-width:760px) {
+      .wrap { width:calc(100% - 40px); }
+      html { scroll-padding-top:125px; }
+      .header-inner { flex-direction:column; gap:9px; align-items:flex-start; padding:14px 0 10px; }
+      .brand img { width:120px; }
+      .nav { width:100%; gap:0; justify-content:space-between; font-size:12px; }
+      .nav a { padding:7px 0; }
+      .nav .nav-apply { padding:7px 12px; }
+      .hero { padding-top:36px; }
+      .hero-main { grid-template-columns:1fr; gap:15px; padding-bottom:25px; }
+      h1 { font-size:clamp(39px,8.9vw,57px); }
+      .eyebrow { font-size:12px; margin-bottom:16px; }
+      .hero-copy { margin:20px 0; }
+      .hero-art { display:none; }
+      .chat-front .art-ai { font-size:102px; }
+      .art-caption { font-size:13px; }
+      .spark { width:32px; height:32px; }
+      .hero-actions { gap:10px; }
+      .button { padding:11px 18px; gap:15px; font-size:14px; }
+      .strip-grid { grid-template-columns:1fr; gap:18px; padding:25px 0; }
+      .strip-item { padding:16px 0 0; border-left:0; border-top:1px solid #ffffff44; }
+      .strip-item:first-child { padding:0; }
+      .strip-value { font-size:22px; }
+      .strip-label { font-size:12px; }
+      .section { padding:52px 0; }
+      .intro { padding-bottom:0; }
+      .intro-box { grid-template-columns:1fr; gap:20px; padding-bottom:35px; }
+      .intro-text { font-size:16px; }
+      .section-head { flex-direction:column; align-items:flex-start; gap:14px; margin-bottom:24px; }
+      .program-grid,.schedule-grid,.apply-panel { grid-template-columns:1fr; }
+      .program-top,.program-body { padding:23px; }
+      .program-time { font-size:24px; }
+      .schedule-row { grid-template-columns:113px 1fr; }
+      .schedule-hour { font-size:16px; }
+      .schedule-row h3 { font-size:17px; }
+      .apply-lead,.apply-detail { padding:27px; }
+      .apply-lead h3 { font-size:29px; }
+      .apply-numbers { margin-top:22px; }
+      .contact-inner { flex-direction:column; align-items:flex-start; gap:14px; }
+      .footer-inner { align-items:flex-start; flex-direction:column; gap:20px; }
+      .footer-info { gap:6px 20px; }
+    }
+    @media (max-width:360px) { .wrap { width:calc(100% - 32px); } .nav { font-size:11px; } h1 { font-size:37px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } .button:hover { transform:none; } }
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#main">본문으로 바로가기</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="부산 시민 AI 체험의 날 첫 화면">
+        <img src="data/busan_official_logo_ko.png" width="3509" height="922" alt="부산광역시">
+        <span class="brand-label">부산 시민 AI 체험의 날</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#about">행사 소개</a><a href="#program">프로그램</a><a href="#schedule">일정·장소</a><a class="nav-apply" href="#apply">신청 안내</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="event-title">
+      <div class="wrap hero-main">
+        <div>
+          <p class="eyebrow">부산 시민 누구나 · 무료 참여</p>
+          <h1 id="event-title"><span class="city">부산 시민</span><span class="ai-word">AI</span> 체험의 날</h1>
+          <p class="hero-copy">생활 속 AI 활용법을<br><strong>쉽고 안전하게</strong> 소개합니다.</p>
+          <div class="hero-tags"><span class="tag">상시 체험 부스</span><span class="tag">AI 전문가 강연</span><span class="tag">현장 신청 100명</span></div>
+          <div class="hero-actions"><a class="button button-primary" href="#apply">참가 신청 안내 <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#schedule">일정 확인 <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit"></div><div class="orbit orbit-two"></div><div class="chat-back"></div><div class="chat-front"><span class="art-ai">AI</span><span class="art-caption">생활 속 AI</span></div><span class="spark"></span><span class="art-dot"></span></div>
+      </div>
+      <div class="event-strip"><div class="wrap strip-grid">
+        <div class="strip-item"><span class="strip-label">행사 일시</span><strong class="strip-value">2026년 11월 30일</strong><span class="strip-sub">10:00~18:00</span></div>
+        <div class="strip-item"><span class="strip-label">행사 장소</span><strong class="strip-value">부산 영화의 전당</strong><span class="strip-sub">1층</span></div>
+        <div class="strip-item"><span class="strip-label">참가비</span><strong class="strip-value">무료</strong><span class="strip-sub">현장 신청 · 정원 100명</span></div>
+      </div></div>
+    </section>
+
+    <section id="about" class="section intro" aria-labelledby="about-title"><div class="wrap intro-box">
+      <div><p class="kicker">ABOUT THE EVENT</p><h2 id="about-title">생활 속 AI를<br>쉽고 안전하게</h2></div>
+      <p class="intro-text"><strong>부산 시민 누구나</strong>를 위한 AI 체험 행사입니다.<br>AI 체험 프로그램 부스와 전문가 강연을 통해 생활 속 AI 활용법을 소개합니다.</p>
+    </div></section>
+
+    <section id="program" class="section" aria-labelledby="program-title"><div class="wrap">
+      <div class="section-head"><div><p class="kicker">PROGRAM</p><h2 id="program-title">체험하고, 강연으로 만나세요</h2></div><p class="section-description">상시 운영하는 체험 부스와<br>1시간의 AI 전문가 강연이 진행됩니다.</p></div>
+      <div class="program-grid">
+        <article class="program-card">
+          <div class="program-top"><div><span class="program-type">AI 체험</span><p class="program-time">상시 운영</p></div><svg class="program-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="7" width="38" height="27" rx="5"/><path d="M16 42h16M24 34v8M16 20h5m-2.5-2.5v5M30 18h.1M34 23h.1" stroke-linecap="round"/></svg></div>
+          <div class="program-body"><h3>AI 체험 프로그램 부스</h3><p>행사 운영 시간 동안 상시 운영합니다.</p><dl class="mini-data"><div><dt>운영 시간</dt><dd>10:00~18:00</dd></div><div><dt>부스별 내용</dt><dd>VR 가상체험, AI 기반 로봇 활용 등</dd></div></dl></div>
+        </article>
+        <article class="program-card talk">
+          <div class="program-top"><div><span class="program-type">AI 전문가 강연</span><p class="program-time">13:00~14:00</p></div><svg class="program-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="17" y="4" width="14" height="25" rx="7"/><path d="M11 22v2a13 13 0 0 0 26 0v-2M24 37v7M17 44h14" stroke-linecap="round"/></svg></div>
+          <div class="program-body"><h3>박범석 강연자와 함께</h3><p>AI 전문가 강연이 약 1시간 진행됩니다.</p><dl class="mini-data"><div><dt>강연자</dt><dd>박범석</dd></div><div><dt>강연 주제</dt><dd>AI 시대 어떻게 해야 똑똑하게?</dd></div></dl></div>
+        </article>
+      </div>
+    </div></section>
+
+    <section id="schedule" class="section schedule-section" aria-labelledby="schedule-title"><div class="wrap">
+      <div class="section-head"><div><p class="kicker">WHEN &amp; WHERE</p><h2 id="schedule-title">일정과 장소를 확인하세요</h2></div><p class="section-description">2026년 11월 30일 · 10:00~18:00</p></div>
+      <div class="schedule-grid"><div class="schedule-list">
+        <div class="schedule-row"><div class="schedule-hour">10:00~18:00</div><div><h3>AI 체험 프로그램 부스</h3><p>상시 운영 · VR 가상체험, AI 기반 로봇 활용 등</p></div></div>
+        <div class="schedule-row"><div class="schedule-hour">13:00~14:00</div><div><h3>AI 전문가 강연</h3><p>강연자 박범석 · 약 1시간<br>강연 주제: AI 시대 어떻게 해야 똑똑하게?</p></div></div>
+      </div><aside class="venue" aria-label="행사 장소 안내"><p class="venue-label">행사 장소</p><p class="venue-name">부산 영화의 전당</p><span class="venue-floor">1층</span></aside></div>
+    </div></section>
+
+    <section id="apply" class="section" aria-labelledby="apply-title"><div class="wrap">
+      <div class="section-head"><div><p class="kicker">JOIN THE EVENT</p><h2 id="apply-title">참가 신청 안내</h2></div><p class="section-description">부산 시민 누구나, 현장 신청으로 참여합니다.</p></div>
+      <div class="apply-panel"><div class="apply-lead"><p class="kicker">참가 방식</p><h3>현장 신청</h3><p>부산 영화의 전당 1층</p><div class="apply-numbers"><div class="apply-number">무료<span>참가비</span></div><div class="apply-number">100명<span>참여 정원</span></div></div></div>
+        <div class="apply-detail"><dl class="mini-data"><div><dt>참여 대상</dt><dd>부산 시민 누구나</dd></div><div><dt>참가 방식</dt><dd>현장 신청</dd></div></dl></div>
+      </div>
+    </div></section>
+    <section class="contact-section" aria-labelledby="contact-title"><div class="wrap contact-inner"><div><h2 id="contact-title">행사 문의</h2><p>부산광역시 AI 센터과</p></div><a class="phone" href="tel:0516666666" aria-label="부산광역시 AI 센터과 051-666-6666으로 전화">051-666-6666 <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><img src="data/busan_official_logo_ko.png" width="3509" height="922" alt="부산광역시"><div class="footer-info"><span><strong>주최</strong> 부산시</span><span><strong>주관</strong> 미정</span><span>부산 시민 AI 체험의 날</span></div><a class="top-link" href="#top">맨 위로 ↑</a></div></footer>
+</body>
+</html>

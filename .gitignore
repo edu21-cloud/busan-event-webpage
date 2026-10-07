@@ -1,0 +1,5 @@
+outputs/
+data/*
+!data/busan_official_logo_ko.png
+__pycache__/
+*.log
